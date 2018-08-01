@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="tinymce.min.js"></script>
+  <script src="jquery.js"></script>
+  <script src="../dist/textcomplete.js"></script>
+  <script>
+	var dataAutocomplete = {
+		'hello': 'some desc'
+	}; 
+
+	var emojiStrategy = {
+		id: 'emoji',
+		match: /(^|\s)%([A-Z0-9+\-\_]*)$/,
+		search: function (term, callback) {
+			callback(Object.keys(dataAutocomplete).filter(function (name) {
+				return name.indexOf(term) != -1;
+			}));
+		},
+		template: function (name) {
+			return '<p class="textcomplete-item__name">' + name + '</p> <p class="textcomplete-item__desc">' + dataAutocomplete[name] + '</p>';
+		},
+		replace: function (name) {
+			return '$1' + name + ' ';
+		}
+	};
+
+	tinymce.init({ selector:'#hello' }).then(function() {
+		var editor = new Textcomplete.editors.TinyMCE(tinymce);
+
+		var textcomplete = new Textcomplete(editor);
+		textcomplete.register([emojiStrategy]);
+	});
+
+	
+
+	 console.log(tinymce);
+  </script>
+</head>
+<body>
+  <textarea id='hello'></textarea>
+
+	<textarea id='hello2'></textarea>
+</body>
+</html>

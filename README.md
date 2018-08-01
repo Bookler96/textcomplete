@@ -1,6 +1,6 @@
 # textcomplete
 
-Autocomplete for textarea elements.
+Autocomplete for textarea elements and [TinyMCE](https://www.tiny.cloud) editor (in developing).
 
 [![NPM version](http://img.shields.io/npm/v/textcomplete.svg)](https://www.npmjs.com/package/textcomplete)
 [![Build Status](https://travis-ci.org/yuku-t/textcomplete.svg?branch=master)](https://travis-ci.org/yuku-t/textcomplete)

@@ -2,56 +2,61 @@
 
 ### Table of Contents
 
--   [Completer](#completer)
-    -   [destroy](#destroy)
-    -   [registerStrategy](#registerstrategy)
-    -   [run](#run)
--   [DropdownItemOptions](#dropdownitemoptions)
--   [DropdownItem](#dropdownitem)
-    -   [destroy](#destroy-1)
-    -   [appended](#appended)
-    -   [activate](#activate)
-    -   [next](#next)
-    -   [prev](#prev)
--   [DropdownOptions](#dropdownoptions)
--   [Dropdown](#dropdown)
-    -   [destroy](#destroy-2)
-    -   [render](#render)
-    -   [deactivate](#deactivate)
-    -   [select](#select)
-    -   [up](#up)
-    -   [down](#down)
-    -   [getActiveItem](#getactiveitem)
--   [CursorOffset](#cursoroffset)
--   [Editor](#editor)
-    -   [destroy](#destroy-3)
-    -   [applySearchResult](#applysearchresult)
-    -   [getCursorOffset](#getcursoroffset)
-    -   [getBeforeCursor](#getbeforecursor)
-    -   [emitMoveEvent](#emitmoveevent)
-    -   [emitEnterEvent](#emitenterevent)
-    -   [emitChangeEvent](#emitchangeevent)
-    -   [emitEscEvent](#emitescevent)
-    -   [getCode](#getcode)
--   [Query](#query)
-    -   [execute](#execute)
-    -   [build](#build)
--   [SearchResult](#searchresult)
--   [StrategyProperties](#strategyproperties)
--   [Strategy](#strategy)
-    -   [destroy](#destroy-4)
-    -   [replace](#replace)
--   [Textarea](#textarea)
-    -   [destroy](#destroy-5)
-    -   [applySearchResult](#applysearchresult-1)
-    -   [getCursorOffset](#getcursoroffset-1)
-    -   [getBeforeCursor](#getbeforecursor-1)
--   [TextcompleteOptions](#textcompleteoptions)
--   [Textcomplete](#textcomplete)
-    -   [destroy](#destroy-6)
-    -   [hide](#hide)
-    -   [register](#register)
-    -   [trigger](#trigger)
+-   [Completer][1]
+    -   [destroy][2]
+    -   [registerStrategy][3]
+    -   [run][4]
+-   [DropdownItemOptions][5]
+-   [DropdownItem][6]
+    -   [destroy][7]
+    -   [appended][8]
+    -   [activate][9]
+    -   [next][10]
+    -   [prev][11]
+-   [DropdownOptions][12]
+-   [Dropdown][13]
+    -   [destroy][14]
+    -   [render][15]
+    -   [deactivate][16]
+    -   [select][17]
+    -   [up][18]
+    -   [down][19]
+    -   [getActiveItem][20]
+-   [CursorOffset][21]
+-   [Editor][22]
+    -   [destroy][23]
+    -   [applySearchResult][24]
+    -   [getCursorOffset][25]
+    -   [getBeforeCursor][26]
+    -   [emitMoveEvent][27]
+    -   [emitEnterEvent][28]
+    -   [emitChangeEvent][29]
+    -   [emitEscEvent][30]
+    -   [getCode][31]
+-   [Query][32]
+    -   [execute][33]
+    -   [build][34]
+-   [SearchResult][35]
+-   [StrategyProperties][36]
+-   [Strategy][37]
+    -   [destroy][38]
+    -   [replace][39]
+-   [Textarea][40]
+    -   [destroy][41]
+    -   [applySearchResult][42]
+    -   [getCursorOffset][43]
+    -   [getBeforeCursor][44]
+-   [TextcompleteOptions][45]
+-   [Textcomplete][46]
+    -   [destroy][47]
+    -   [hide][48]
+    -   [register][49]
+    -   [trigger][50]
+-   [TinyMCE][51]
+    -   [destroy][52]
+    -   [applySearchResult][53]
+    -   [getCursorOffset][54]
+    -   [getBeforeCursor][55]
 
 ## Completer
 
@@ -69,7 +74,7 @@ Register a strategy to the completer.
 
 **Parameters**
 
--   `strategy` **[Strategy](#strategy)** 
+-   `strategy` **[Strategy][56]** 
 
 Returns **this** 
 
@@ -77,17 +82,17 @@ Returns **this**
 
 **Parameters**
 
--   `text` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Head to input cursor.
+-   `text` **[string][57]** Head to input cursor.
 
 Returns **void** 
 
 ## DropdownItemOptions
 
-Type: {className: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?}
+Type: {className: [string][57]?}
 
 **Properties**
 
--   `className` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+-   `className` **[string][57]?** 
 
 ## DropdownItem
 
@@ -95,8 +100,8 @@ Encapsulate an item of dropdown.
 
 **Parameters**
 
--   `searchResult` **[SearchResult](#searchresult)** 
--   `options` **[DropdownItemOptions](#dropdownitemoptions)** 
+-   `searchResult` **[SearchResult][58]** 
+-   `options` **[DropdownItemOptions][59]** 
 
 ### destroy
 
@@ -110,7 +115,7 @@ Callbacked when it is appended to a dropdown.
 
 **Parameters**
 
--   `dropdown` **[Dropdown](#dropdown)** 
+-   `dropdown` **[Dropdown][60]** 
 
 ### activate
 
@@ -122,28 +127,28 @@ Returns **this**
 
 Get the next sibling.
 
-Returns **[DropdownItem](#dropdownitem)?** 
+Returns **[DropdownItem][61]?** 
 
 ### prev
 
 Get the previous sibling.
 
-Returns **[DropdownItem](#dropdownitem)?** 
+Returns **[DropdownItem][61]?** 
 
 ## DropdownOptions
 
-Type: {className: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?, footer: function (any): ([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))?, header: function (any): ([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))?, maxCount: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, placement: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?, rotate: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?, style: {}?, item: [DropdownItemOptions](#dropdownitemoptions)?}
+Type: {className: [string][57]?, footer: function (any): ([string][57] \| [string][57])?, header: function (any): ([string][57] \| [string][57])?, maxCount: [number][62]?, placement: [string][57]?, rotate: [boolean][63]?, style: {}?, item: [DropdownItemOptions][59]?}
 
 **Properties**
 
--   `className` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
--   `footer` **function (any): ([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))?** 
--   `header` **function (any): ([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))?** 
--   `maxCount` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?** 
--   `placement` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
--   `rotate` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
+-   `className` **[string][57]?** 
+-   `footer` **function (any): ([string][57] \| [string][57])?** 
+-   `header` **function (any): ([string][57] \| [string][57])?** 
+-   `maxCount` **[number][62]?** 
+-   `placement` **[string][57]?** 
+-   `rotate` **[boolean][63]?** 
 -   `style` **{}?** 
--   `item` **[DropdownItemOptions](#dropdownitemoptions)?** 
+-   `item` **[DropdownItemOptions][59]?** 
 
 ## Dropdown
 
@@ -153,12 +158,12 @@ Encapsulate a dropdown view.
 
 **Parameters**
 
--   `options` **[DropdownOptions](#dropdownoptions)** 
+-   `options` **[DropdownOptions][64]** 
 
 **Properties**
 
--   `shown` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** Whether the #el is shown or not.
--   `items` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[DropdownItem](#dropdownitem)>** The array of rendered dropdown items.
+-   `shown` **[boolean][63]** Whether the #el is shown or not.
+-   `items` **[Array][65]&lt;[DropdownItem][61]>** The array of rendered dropdown items.
 
 ### destroy
 
@@ -170,8 +175,8 @@ Render the given data as dropdown items.
 
 **Parameters**
 
--   `searchResults` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[SearchResult](#searchresult)>** 
--   `cursorOffset` **[CursorOffset](#cursoroffset)** 
+-   `searchResults` **[Array][65]&lt;[SearchResult][58]>** 
+-   `cursorOffset` **[CursorOffset][66]** 
 
 Returns **this** 
 
@@ -185,7 +190,7 @@ Returns **this**
 
 **Parameters**
 
--   `dropdownItem` **[DropdownItem](#dropdownitem)** 
+-   `dropdownItem` **[DropdownItem][61]** 
 
 Returns **this** 
 
@@ -193,7 +198,7 @@ Returns **this**
 
 **Parameters**
 
--   `e` **[CustomEvent](https://developer.mozilla.org/docs/Web/API/CustomEvent/CustomEvent)** 
+-   `e` **[CustomEvent][67]** 
 
 Returns **this** 
 
@@ -201,7 +206,7 @@ Returns **this**
 
 **Parameters**
 
--   `e` **[CustomEvent](https://developer.mozilla.org/docs/Web/API/CustomEvent/CustomEvent)** 
+-   `e` **[CustomEvent][67]** 
 
 Returns **this** 
 
@@ -209,18 +214,18 @@ Returns **this**
 
 Retrieve the active item.
 
-Returns **([DropdownItem](#dropdownitem) | null)** 
+Returns **([DropdownItem][61] | null)** 
 
 ## CursorOffset
 
-Type: {lineHeight: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number), top: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number), left: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, right: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?}
+Type: {lineHeight: [number][62], top: [number][62], left: [number][62]?, right: [number][62]?}
 
 **Properties**
 
--   `lineHeight` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
--   `top` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
--   `left` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?** 
--   `right` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?** 
+-   `lineHeight` **[number][62]** 
+-   `top` **[number][62]** 
+-   `left` **[number][62]?** 
+-   `right` **[number][62]?** 
 
 ## Editor
 
@@ -246,7 +251,7 @@ It is called when a search result is selected by a user.
 
 **Parameters**
 
--   `_` **[SearchResult](#searchresult)** 
+-   `_` **[SearchResult][58]** 
 
 Returns **void** 
 
@@ -255,18 +260,18 @@ Returns **void**
 The input cursor's absolute coordinates from the window's left
 top corner.
 
-Returns **[CursorOffset](#cursoroffset)** 
+Returns **[CursorOffset][66]** 
 
 ### getBeforeCursor
 
 Editor string value from head to cursor.
 Returns null if selection type is range not cursor.
 
-Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+Returns **[string][57]?** 
 
 ### emitMoveEvent
 
--   **See: [Textarea](#textarea) for live example.**
+-   **See: [Textarea][40] for live example.**
 
 Emit a move event, which moves active dropdown element.
 Child class must call this method at proper timing with proper parameter.
@@ -275,44 +280,44 @@ Child class must call this method at proper timing with proper parameter.
 
 -   `code` **(`"UP"` \| `"DOWN"`)** 
 
-Returns **[CustomEvent](https://developer.mozilla.org/docs/Web/API/CustomEvent/CustomEvent)** 
+Returns **[CustomEvent][67]** 
 
 ### emitEnterEvent
 
--   **See: [Textarea](#textarea) for live example.**
+-   **See: [Textarea][40] for live example.**
 
 Emit a enter event, which selects current search result.
 Child class must call this method at proper timing.
 
-Returns **[CustomEvent](https://developer.mozilla.org/docs/Web/API/CustomEvent/CustomEvent)** 
+Returns **[CustomEvent][67]** 
 
 ### emitChangeEvent
 
--   **See: [Textarea](#textarea) for live example.**
+-   **See: [Textarea][40] for live example.**
 
 Emit a change event, which triggers auto completion.
 Child class must call this method at proper timing.
 
-Returns **[CustomEvent](https://developer.mozilla.org/docs/Web/API/CustomEvent/CustomEvent)** 
+Returns **[CustomEvent][67]** 
 
 ### emitEscEvent
 
--   **See: [Textarea](#textarea) for live example.**
+-   **See: [Textarea][40] for live example.**
 
 Emit a esc event, which hides dropdown element.
 Child class must call this method at proper timing.
 
-Returns **[CustomEvent](https://developer.mozilla.org/docs/Web/API/CustomEvent/CustomEvent)** 
+Returns **[CustomEvent][67]** 
 
 ### getCode
 
--   **See: [Textarea](#textarea) for live example.**
+-   **See: [Textarea][40] for live example.**
 
 Helper method for parsing KeyboardEvent.
 
 **Parameters**
 
--   `e` **[KeyboardEvent](https://developer.mozilla.org/docs/Web/API/KeyboardEvent)** 
+-   `e` **[KeyboardEvent][68]** 
 
 Returns **KeyCode** 
 
@@ -322,8 +327,8 @@ Encapsulate matching condition between a Strategy and current editor's value.
 
 **Parameters**
 
--   `strategy` **[Strategy](#strategy)** 
--   `term` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `strategy` **[Strategy][56]** 
+-   `term` **[string][57]** 
 -   `match` **MatchData** 
 
 ### execute
@@ -332,7 +337,7 @@ Invoke search strategy and callback the given function.
 
 **Parameters**
 
--   `callback` **function ([Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[SearchResult](#searchresult)>): void** 
+-   `callback` **function ([Array][65]&lt;[SearchResult][58]>): void** 
 
 ### build
 
@@ -340,10 +345,10 @@ Build a Query object by the given string if this matches to the string.
 
 **Parameters**
 
--   `strategy` **[Strategy](#strategy)** 
--   `text` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Head to input cursor.
+-   `strategy` **[Strategy][56]** 
+-   `text` **[string][57]** Head to input cursor.
 
-Returns **[Query](#query)?** 
+Returns **[Query][69]?** 
 
 ## SearchResult
 
@@ -351,26 +356,26 @@ Encapsulate an result of each search results.
 
 **Parameters**
 
--   `data` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
--   `term` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
--   `strategy` **[Strategy](#strategy)** 
+-   `data` **[object][70]** An element of array callbacked by search function.
+-   `term` **[string][57]** 
+-   `strategy` **[Strategy][56]** 
 
 ## StrategyProperties
 
 Properties for a strategy.
 
-Type: {match: ([RegExp](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) | function ([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)): (MatchData | null)), search: [Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function), replace: function (any): ([Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)> | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | null), cache: [boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?, context: [Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)?, template: function (any): [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?, index: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?, id: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?}
+Type: {match: ([RegExp][71] | function ([string][57]): (MatchData | null)), search: [Function][72], replace: function (any): ([Array][65]&lt;[string][57]> | [string][57] | null), cache: [boolean][63]?, context: [Function][72]?, template: function (any): [string][57]?, index: [number][62]?, id: [string][57]?}
 
 **Properties**
 
--   `match` **([RegExp](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) | function ([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)): (MatchData | null))** 
--   `search` **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** 
--   `replace` **function (any): ([Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)> | [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | null)** 
--   `cache` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
--   `context` **[Function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)?** 
--   `template` **function (any): [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
--   `index` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?** 
--   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+-   `match` **([RegExp][71] | function ([string][57]): (MatchData | null))** 
+-   `search` **[Function][72]** 
+-   `replace` **function (any): ([Array][65]&lt;[string][57]> | [string][57] | null)** 
+-   `cache` **[boolean][63]?** 
+-   `context` **[Function][72]?** 
+-   `template` **function (any): [string][57]?** 
+-   `index` **[number][62]?** 
+-   `id` **[string][57]?** 
 
 ## Strategy
 
@@ -378,7 +383,7 @@ Encapsulate a single strategy.
 
 **Parameters**
 
--   `props` **[StrategyProperties](#strategyproperties)** 
+-   `props` **[StrategyProperties][73]** 
 
 ### destroy
 
@@ -388,7 +393,7 @@ Returns **this**
 
 **Parameters**
 
--   `data` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** An element of array callbacked by search function.
+-   `data` **[object][70]** An element of array callbacked by search function.
 
 ## Textarea
 
@@ -398,7 +403,7 @@ Encapsulate the target textarea element.
 
 **Parameters**
 
--   `el` **[HTMLTextAreaElement](https://developer.mozilla.org/docs/Web/API/HTMLTextAreaElement)** 
+-   `el` **[HTMLTextAreaElement][74]** Where the textcomplete works on.
 
 ### destroy
 
@@ -406,27 +411,27 @@ Returns **this**
 
 ### applySearchResult
 
-Implementation for [Editor#applySearchResult](#editorapplysearchresult)
+Implementation for [Editor#applySearchResult][75]
 
 **Parameters**
 
--   `searchResult` **[SearchResult](#searchresult)** 
+-   `searchResult` **[SearchResult][58]** 
 
 ### getCursorOffset
 
-Implementation for [Editor#getCursorOffset](#editorgetcursoroffset)
+Implementation for [Editor#getCursorOffset][76]
 
 ### getBeforeCursor
 
-Implementation for [Editor#getBeforeCursor](#editorgetbeforecursor)
+Implementation for [Editor#getBeforeCursor][77]
 
 ## TextcompleteOptions
 
-Type: {dropdown: [DropdownOptions](#dropdownoptions)?}
+Type: {dropdown: [DropdownOptions][64]?}
 
 **Properties**
 
--   `dropdown` **[DropdownOptions](#dropdownoptions)?** 
+-   `dropdown` **[DropdownOptions][64]?** 
 
 ## Textcomplete
 
@@ -436,14 +441,14 @@ The core of textcomplete. It acts as a mediator.
 
 **Parameters**
 
--   `editor` **[Editor](#editor)** 
--   `options` **[TextcompleteOptions](#textcompleteoptions)**  (optional, default `{}`)
+-   `editor` **[Editor][78]** Where the textcomplete works on.
+-   `options` **[TextcompleteOptions][79]**  (optional, default `{}`)
 
 ### destroy
 
 **Parameters**
 
--   `destroyEditor` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**  (optional, default `true`)
+-   `destroyEditor` **[boolean][63]**  (optional, default `true`)
 
 Returns **this** 
 
@@ -455,7 +460,7 @@ Returns **this**
 
 **Parameters**
 
--   `strategyPropsArray` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[StrategyProperties](#strategyproperties)>** 
+-   `strategyPropsArray` **[Array][65]&lt;[StrategyProperties][73]>** 
 
 **Examples**
 
@@ -481,6 +486,194 @@ Start autocompleting.
 
 **Parameters**
 
--   `text` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Head to input cursor.
+-   `text` **[string][57]** Head to input cursor.
 
 Returns **this** 
+
+## TinyMCE
+
+**Extends Editor**
+
+Encapsulate the target textarea element.
+
+**Parameters**
+
+-   `el` **[HTMLTextAreaElement][74]** Where the textcomplete works on.
+
+### destroy
+
+Returns **this** 
+
+### applySearchResult
+
+Implementation for [Editor#applySearchResult][75]
+
+**Parameters**
+
+-   `searchResult` **[SearchResult][58]** 
+
+### getCursorOffset
+
+Implementation for [Editor#getCursorOffset][76]
+
+### getBeforeCursor
+
+Implementation for [Editor#getBeforeCursor][77]
+
+[1]: #completer
+
+[2]: #destroy
+
+[3]: #registerstrategy
+
+[4]: #run
+
+[5]: #dropdownitemoptions
+
+[6]: #dropdownitem
+
+[7]: #destroy-1
+
+[8]: #appended
+
+[9]: #activate
+
+[10]: #next
+
+[11]: #prev
+
+[12]: #dropdownoptions
+
+[13]: #dropdown
+
+[14]: #destroy-2
+
+[15]: #render
+
+[16]: #deactivate
+
+[17]: #select
+
+[18]: #up
+
+[19]: #down
+
+[20]: #getactiveitem
+
+[21]: #cursoroffset
+
+[22]: #editor
+
+[23]: #destroy-3
+
+[24]: #applysearchresult
+
+[25]: #getcursoroffset
+
+[26]: #getbeforecursor
+
+[27]: #emitmoveevent
+
+[28]: #emitenterevent
+
+[29]: #emitchangeevent
+
+[30]: #emitescevent
+
+[31]: #getcode
+
+[32]: #query
+
+[33]: #execute
+
+[34]: #build
+
+[35]: #searchresult
+
+[36]: #strategyproperties
+
+[37]: #strategy
+
+[38]: #destroy-4
+
+[39]: #replace
+
+[40]: #textarea
+
+[41]: #destroy-5
+
+[42]: #applysearchresult-1
+
+[43]: #getcursoroffset-1
+
+[44]: #getbeforecursor-1
+
+[45]: #textcompleteoptions
+
+[46]: #textcomplete
+
+[47]: #destroy-6
+
+[48]: #hide
+
+[49]: #register
+
+[50]: #trigger
+
+[51]: #tinymce
+
+[52]: #destroy-7
+
+[53]: #applysearchresult-2
+
+[54]: #getcursoroffset-2
+
+[55]: #getbeforecursor-2
+
+[56]: #strategy
+
+[57]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[58]: #searchresult
+
+[59]: #dropdownitemoptions
+
+[60]: #dropdown
+
+[61]: #dropdownitem
+
+[62]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[63]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[64]: #dropdownoptions
+
+[65]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[66]: #cursoroffset
+
+[67]: https://developer.mozilla.org/docs/Web/API/CustomEvent/CustomEvent
+
+[68]: https://developer.mozilla.org/docs/Web/API/KeyboardEvent
+
+[69]: #query
+
+[70]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[71]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+
+[72]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
+
+[73]: #strategyproperties
+
+[74]: https://developer.mozilla.org/docs/Web/API/HTMLTextAreaElement
+
+[75]: #editorapplysearchresult
+
+[76]: #editorgetcursoroffset
+
+[77]: #editorgetbeforecursor
+
+[78]: #editor
+
+[79]: #textcompleteoptions
